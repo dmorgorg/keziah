@@ -1,0 +1,73 @@
+// src/lib/styles/app.scss
+
+:root {
+    --primary: #5f2f5f;
+    --secondary: #bfb8bf;
+    --secondary: #A387AA;
+    --secondary-light: #bfafbf;
+    --secondary-dark: #5f585f;
+}
+
+
+
+html {
+    box-sizing: border-box;
+    font-family: 'Signika Negative', Arial, Helvetica,sans-serif;
+    line-height: 1.35;
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0 auto;
+    padding: 0;
+    color: var(--secondary-dark);
+    color: black;
+    height: 100%;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: clamp(10px, 2vw, 20px);
+
+    // h1 {
+    //     color: var(--secondary-dark);
+    //     color: black;
+    // }
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: var(--secondary-light);
+    // padding: 0 2px;
+    width: 16px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 8px;
+    border: 5px solid var(--secondary-light);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+    border: 4px solid var(--secondary-light);
+}
+
+* {
+    scrollbar-width: auto;
+    /* "auto" or "thin" */
+    scrollbar-color: var(--primary) var(--secondary);
+    /* scroll thumb and track */
+}

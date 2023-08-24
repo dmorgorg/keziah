@@ -1,0 +1,58 @@
+<!-- src/lib/components/Header.svelte  -->
+<script>
+  import Nav from "$lib/components/Nav.svelte";
+  let title = "Keziah Hobbs";
+  let subtitle = "Voice Actor";
+</script>
+
+<header>
+  <div class="leftmatter">
+    <a class="title" href="/">
+      {title}
+    </a>
+    <div class="subtitle">{subtitle}</div>
+  </div>
+
+  <Nav />
+</header>
+
+<style lang="scss">
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary);
+    font-variant: small-caps;
+    color: var(--secondary);
+    text-shadow: 0 0 5px black;
+    font-family: "Signika Negative", sans-serif;
+    font-size: 125%;
+
+    .leftmatter {
+      margin-left: 1em;
+    }
+
+    a {
+      &:link,
+      &:visited,
+      &:active {
+        color: var(--secondary);
+        font-weight: bold;
+        font-size: 200%;
+        text-decoration: none;
+      }
+      &:hover {
+        color: white;
+      }
+    }
+
+    .title {
+      font-family: "Signika Negative", sans-serif;
+      font-weight: bold;
+    }
+    .subtitle {
+      font-family: "Signika Negative", sans-serif;
+      font-weight: bold;
+    }
+  }
+</style>
