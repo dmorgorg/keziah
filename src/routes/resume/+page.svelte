@@ -187,6 +187,7 @@
         font-variant: small-caps;
         font-size: 1.5rem;
         margin: 0;
+        margin-bottom: 0.25em;
         padding: 0;
 
         & ~ h1 {
@@ -209,7 +210,25 @@
     ul {
       padding: 0;
       margin: 0;
-      margin-left: 1em;
+      // margin-left: 1em;
+      list-style: none;
+
+      li {
+        margin-bottom: 0.25em;
+        margin-left: 1.5em;
+        // &::marker {
+        //  content: "⛤";
+        //   color: transparent;
+        //   text-shadow: 0 0 0 var(--secondary);
+        // }
+        &::before {
+          content: "⛤";
+          display: inline-block;
+          margin-right: 0.5em;
+          margin-left: -1.5em;
+          text-shadow: 0 0 0 var(--secondary);
+        }
+      }
     }
   }
 </style>
